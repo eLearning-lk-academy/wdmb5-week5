@@ -8,6 +8,7 @@
 :root {
     --text-color: #10221B;
     --primary-color: #1DC5CE;
+    --primary-color-light: #1dc5ce63;
     --bg-color: #f9fcff;
 }
 
@@ -238,6 +239,89 @@ header{
     color: var(--primary-color);
 }
 
+.about-container{
+    display: grid;
+    grid-template-areas: 'about-left about-right';
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    align-items: center;
+    background-color: var(--bg-color);
+
+}
+
+.about-left{
+    grid-area: about-left;
+    padding: 20px;
+    padding-left: 40%;
+}
+
+
+.about-right{
+    grid-area: about-right;
+    background-image: url(/assets/img/pattern-1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--primary-color);
+    padding-right: 40%;
+}
+
+.about-right img{
+    max-width: 100%;
+    max-height: 640;
+    height: auto;
+    object-fit: cover;
+}
+
+.about-links{
+    display: flex;
+    margin-top: 30px;
+    gap: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 0px #0000001b;
+}
+
+.about-links-list{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.about-links-item{
+    display: flex;
+    font-size: 1.1rem;
+    font-weight: 500;
+    gap: 8px;
+    align-items: center;
+}
+
+.about-links-item .icon{
+    font-size: 1rem;
+    border-radius: 50%;
+    color: var(--primary-color);
+    background-color: var(--primary-color-light);
+    padding: 5px;
+
+}
+
+.about-video{
+    background-image: url(/assets/img/about-image-2.jpg) ;
+    width: 150px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-video a{
+    font-size: 3.5rem;
+    color: #fff;
+}
+
 .menu-btn{
     background-color: transparent;
     border: none;
@@ -366,6 +450,26 @@ header{
 
     .feature-item p{
         font-size: 1rem;
+    }
+
+    .about-container{
+        grid-template-areas: 'about-right' 'about-left';
+        grid-template-columns: 1fr;
+    }
+
+    .about-right{
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .about-right img{
+        width: 70%;
+    }
+
+    .about-left{
+        padding: 20px;
+        text-align: center;
+
     }
 
     .mobile-menu{
