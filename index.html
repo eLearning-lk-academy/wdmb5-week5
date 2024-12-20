@@ -19,7 +19,7 @@
           <a href="/" class="logo">
             <img src="/assets/img/logo.jpg" alt="logo" />
           </a>
-          <ul class="menu">
+          <ul class="menu _desktop-flex">
             <li class="menu-item active"><a href="/">Home</a></li>
             <li class="menu-item"><a href="/">About</a></li>
             <li class="menu-item"><a href="/">Contact</a></li>
@@ -31,7 +31,8 @@
               </a>
               <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
-            <button class="btn btn-primary login-btn"><i class="fa-regular fa-user"></i> Login</button>
+            <button class="btn btn-primary login-btn _desktop"><i class="fa-regular fa-user"></i> Login</button>
+            <button class="_mobile menu-btn" id="menuBtn" ><i class="fa-solid fa-bars"></i></button>
           </div>
         </div>
       </nav>
@@ -39,7 +40,7 @@
     <main>
         <section id="hero" class="hero">
             <div class="hero-container">
-                <div class="hero-left">
+                <div class="hero-left _desktop">
                     <img class="hero-img" src="/assets/img/hero.png" alt="hero" />
                 </div>
                 <div class="hero-right">
@@ -80,6 +81,29 @@
             </div>
         </section>
     </main>
+    <div class="overlay d-none" id="overlay"></div>
+    <div class="mobile-menu d-none" id="mobileMenu">
+      <div class="mm-logo">
+        <a href="/">
+          <img src="/assets/img/logo.jpg" alt="logo" />
+        </a>
+      </div>
+      <button class="mm-close-btn" id="mmCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+      <nav class="mm-menu">
+        <ul class="mm-menu-items">
+          <li class="menu-item active"><a href="/">Home</a></li>
+          <li class="menu-item"><a href="/">About</a></li>
+          <li class="menu-item"><a href="/">Contact</a></li>
+          <li class="menu-item"><a href="/">Book Now</a></li>
+          <li class="menu-item"><a href="/">Shop</a></li>
+        </ul>
+      </nav>
+      <div class="mm-footer">
+        <button class="btn btn-secondary">Login <i class="fa-solid fa-user"></i></button>
+        <button class="btn btn-primary">Register <i class="fa-solid fa-user-plus"></i></button>
+      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.1/js/all.min.js"></script>
+    <script src="/assets/js/script.js"></script>
   </body>
 </html>
